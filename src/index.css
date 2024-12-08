@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "realtxt";
+}
+
+@font-face {
+    font-family: realtxt;
+    src: url(./assets/pxiEyp8kv8JHgFVrJJfecg.woff2);
+  
+  }
+@font-face {
+    font-family: realtxt1;
+    src: url(./assets/rP2Hp2ywxg089UriCZ2IHTWEBlwu8Q.woff2);
+  
+  }
+
+  body{
+    background-color: #023145;
+  
+  }
