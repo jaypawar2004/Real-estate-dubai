@@ -30,7 +30,7 @@ const NavBar = () => {
       <div className="fixed top-0 left-0 w-full z-30 ">
   
       {/* Main Navbar */}
-        <div className="backdrop-blur-sm bg-white/30 w-full px-4 sm:px-6 lg:px-16 h-[75px] flex items-center lg:justify-evenly border-b shadow-md sm:flex justify-between">
+        <div className=" bg-white w-full px-4 sm:px-6 lg:px-16 h-[75px] flex items-center lg:justify-evenly border-b shadow-md sm:flex justify-between">
           {/* Logo Section */}
           <div className="w-[65px] h-[65px] rounded-full">
             <Link to="/">
