@@ -21,10 +21,16 @@ import ViewProperty from './components/ViewProperty';
 import ContactPage from './components/ContactPage';
 import PropertyListing from './components/PropertyListing';
 import BlogForm from './components/BlogForm';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Helmet>
+                <title>Real Estate Dubai - Your Dream Properties</title>
+                <meta name="description" content="Explore top properties in Dubai with expert guidance." />
+                <meta name="keywords" content="Real Estate, Dubai, Properties, Rent, Buy" />
+            </Helmet>
       {/* Navbar at the top */}
       <NavBar />
       {/* <PopPage/> */}
@@ -51,6 +57,7 @@ const App = () => {
           <Route path="/property/:id" element={<ViewProperty />} />
           {/* <Route path="/map" element={<PopPage />} /> */}
           <Route path="*" element={<div>404 - Page Not Found</div>} />
+          <Route path="*" element={<div><Helmet><title>404 - Page Not Found</title></Helmet>404 - Page Not Found</div>} />
         </Routes>
       </main>
 

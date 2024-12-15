@@ -7,10 +7,12 @@ const PropertyForm = () => {
 
   
     <div className="">
-<div className="relative mt-[10vh] flex flex-col lg:flex-row items-center justify-between bg-cover bg-center min-h-screen" 
-         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1727444879868-bbd6e27b1347?q=80&w=2058&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
+      
+
+<div className="relative flex flex-col lg:flex-row items-center justify-between bg-cover bg-center min-h-screen" 
+         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1733181738441-bdb8834689ba?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
       {/* Left Section */}
-      <div className="w-full lg:w-1/2 px-5 lg:pl-16 mb-8 lg:mb-0 text-center lg:text-left">
+      <div className="w-full lg:w-1/2 px-5 lg:pl-16 mb-8 lg:mb-0 text-center lg:text-left relative lg:-top-[15vw]  top-[10vh]">
           <h1 className="text-black text-2xl lg:text-4xl font-bold mb-4">
             LOOKING TO SELL OR RENT YOUR PROPERTY?
           </h1>
@@ -69,7 +71,7 @@ const PropertyForm = () => {
                 <input
                   type="tel"
                   id="phone"
-                  placeholder="+91 81234 56789"
+                  placeholder=" 81234 56789"
                   className="w-full border-2 p-3 pl-20 rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
@@ -120,6 +122,8 @@ const PropertyForm = () => {
           </form>
         </div>
     </div>
+
+      
     <div className="search-container bg-white rounded-lg p-5 max-w-[1350px] mx-auto mt-12 shadow-md relative z-10">
   <div className="tabs flex flex-wrap justify-center gap-4 mb-5">
     {/* Responsive Links */}

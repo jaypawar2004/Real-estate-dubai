@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 import PopPage from './PopPage'
 import ContactPage from './ContactPage';
 import OffPlan from './OffPlan';
-const StartHome = () => {
+import BlogPost from './BlogPost';
+import blogs from "../data/Blogs";
+
+const StartHome = ({ id, title, description, image }) => {
   const properties = [
     {
       id: 1,
@@ -129,7 +132,7 @@ const StartHome = () => {
         {/* <!-- Buy/Rent Dropdown --> */}
         <select className="dropdown w-[36vw] bg-transparent sm:w-[15%] border p-2 rounded">
           <option>Buy</option>
-          <option>Rent</option>
+          
         </select>
   
 
@@ -143,27 +146,27 @@ const StartHome = () => {
         {/* <!-- Property Type Dropdown --> */}
         <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
           <option>Property Type</option>
-          <option>Apartments</option>
-          <option>Buildings</option>
-          <option>Duplexes</option>
-          <option>Mansions</option>
-          <option>Penthouses</option>
-          <option>Plots</option>
-          <option>Townhouses</option>
-          <option>Villas</option>
+          <option className='text-zinc-800'>Apartments</option>
+          <option className='text-zinc-800'>Buildings</option>
+          <option className='text-zinc-800'>Duplexes</option>
+          <option className='text-zinc-800'>Mansions</option>
+          <option className='text-zinc-800'>Penthouses</option>
+          <option className='text-zinc-800'>Plots</option>
+          <option className='text-zinc-800'>Townhouses</option>
+          <option className='text-zinc-800'>Villas</option>
         </select>
 
         {/* <!-- Bedroom Dropdown --> */}
         <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
           <option>Bedroom</option>
-          <option>Studio</option>
-          <option>1 Bedroom</option>
-          <option>2 Bedrooms</option>
-          <option>3 Bedrooms</option>
-          <option>4 Bedrooms</option>
-          <option>5 Bedrooms</option>
-          <option>6 Bedrooms</option>
-          <option>7+ Bedrooms</option>
+          <option className='text-zinc-800'>Studio</option>
+          <option className='text-zinc-800' >1 Bedroom</option>
+          <option className='text-zinc-800' >2 Bedrooms</option>
+          <option className='text-zinc-800' >3 Bedrooms</option>
+          <option className='text-zinc-800' >4 Bedrooms</option>
+          <option className='text-zinc-800' >5 Bedrooms</option>
+          <option className='text-zinc-800' >6 Bedrooms</option>
+          <option className='text-zinc-800' >7+ Bedrooms</option>
         </select>
 
         {/* <!-- Area Dropdown --> */}
@@ -190,10 +193,11 @@ const StartHome = () => {
   
     <div className="max-w-7xl mx-auto px-4 text-">
       {/* <!-- Header --> */}
-      <div className=" w-full bg-gray-800 pt-12 p-4">
+      <div className=" w-full  pt-12 p-4">
       <div className="grid gap-14 md:grid-cols-3 md:gap-5">
         {/* Card 1 */}
-        <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+        <div className="rounded-xl border-t-2 bg-white p-6 text-center shadow-xl">
+          <Link to='/pro'>
           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
             <svg
               viewBox="0 0 33 46"
@@ -207,16 +211,20 @@ const StartHome = () => {
               ></path>
             </svg>
           </div>
+          
           <h1 className="text-darken mb-3 capitalize flex items-center justify-center text-xl font-medium lg:px-14">
             List your property
           </h1>
           
+          </Link>
         </div>
 
+
         {/* Card 2 */}
+       <Link to='/developer'>
         <div
           data-aos-delay="150"
-          className="rounded-xl bg-white p-6 text-center shadow-xl"
+          className="rounded-xl bg-white border-t-2 p-6 text-center shadow-xl"
         >
           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
           <svg
@@ -236,9 +244,12 @@ const StartHome = () => {
           </h1>
           
         </div>
+       
+       </Link>
+       <Link to='/home'>
         <div
           data-aos-delay="150"
-          className="rounded-xl bg-white p-6 text-center shadow-xl"
+          className="rounded-xl bg-white border-t-2 p-6 text-center shadow-xl"
         >
           <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-teal-400 shadow-teal-500/40">
           <svg
@@ -258,6 +269,8 @@ const StartHome = () => {
           </h1>
           
         </div>
+       
+       </Link>
 
         {/* Add Card 3 similarly */}
       </div>
@@ -271,15 +284,15 @@ const StartHome = () => {
                 <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
                     <div className="w-full flex-col justify-center items-start gap-8 flex">
                         <div className="flex-col justify-start lg:items-start items-center gap-4 flex">
-                            <h1 className="text-gray-400 text-3xl font-bold leading-relaxed">Why Le Rose Real Estate</h1>
+                            <h1 className="text-black text-3xl font-bold leading-relaxed">Why Le Rose Real Estate</h1>
                             <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                                 <h5
-                                    className="text-gray-300 text-xl font-bold font-manrope leading-normal lg:text-start text-center">
+                                    className="text-gray-800 text-xl font-bold font-manrope leading-normal lg:text-start text-center">
                                     Explore expert real estate services
 with personalized care tailored to
 your needs.</h5>
                                 <p
-                                    className="text-gray-300 text-base font-normal leading-relaxed lg:text-start text-center">
+                                    className="text-gray-800 text-base font-normal leading-relaxed lg:text-start text-center">
                                     Welcome to Le Rose Real Estate, your premier
 real estate partner in Dubai. Founded and
 operated by a dedicated team of Australians, we
@@ -328,7 +341,7 @@ stage of their real estate journey. </p>
                                             
       </div>
 
-<ContactPage />
+
     </div>
   </div>
   <div className="max-w-7xl mx-auto p-6 mt-[5vw]">
@@ -343,17 +356,17 @@ stage of their real estate journey. </p>
 <div className="text-gray-700 text-lg font-medium mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
   <div>
   <div className="w-full relative">
-<p className="text-lg text-gray-300 font-semibold font-manrope">
+<p className="text-lg text-gray-800 font-semibold font-manrope">
 <span className="bg-gradient-to-r from-indigo-600  to-purple-600  bg-no-repeat bg-bottom p-1 text-white">Featured</span>Properties in Dubai
 </p>
 </div>
-      <span className="text-sm text-zinc-300 font-thin">
+      <span className="text-sm text-zinc-800 font-thin">
         Enjoy our carefully curated selection of some properties as we walk you around them.
       </span>
     
   </div>
   <Link
-    className="lg:border-2 text-zinc-300 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200"
+    className="lg:border-2 text-zinc-700 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200 hover:text-zinc-800"
     to="/home"
   >
     More properties
@@ -435,17 +448,17 @@ stage of their real estate journey. </p>
 <div className="text-gray-300 text-lg font-medium mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
   <div>
   <div className="w-full relative">
-<p className="text-lg text-gray-300 font-semibold font-manrope">
+<p className="text-lg text-gray-800 font-semibold font-manrope">
 <span className="bg-gradient-to-r from-indigo-600  to-purple-600  bg-no-repeat bg-bottom p-1 text-white">Properties</span> For Sale in Dubai
 </p>
 </div>
-      <span className="text-sm text-zinc-300 font-thin">
+      <span className="text-sm text-zinc-800 font-thin">
         Enjoy our carefully curated selection of some properties as we walk you around them.
       </span>
     
   </div>
   <Link
-    className="lg:border-2 text-zinc-300 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200"
+    className="lg:border-2 text-zinc-800 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200 hover:text-zinc-800"
     to="/home"
   >
     More properties
@@ -527,17 +540,17 @@ stage of their real estate journey. </p>
 <div className="text-gray-700 text-lg font-medium mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
   <div>
   <div className="w-full relative">
-<p className="text-lg text-gray-300 font-semibold font-manrope">
+<p className="text-lg text-gray-800 font-semibold font-manrope">
 <span className="bg-gradient-to-r from-indigo-600  to-purple-600  bg-no-repeat bg-bottom p-1 text-white">Off-Plan</span> Properties in Dubai
 </p>
 </div>
-      <span className="text-sm text-zinc-300 font-thin">
+      <span className="text-sm text-zinc-700 font-thin">
         Enjoy our carefully curated selection of some properties as we walk you around them.
       </span>
     
   </div>
   <Link
-    className="lg:border-2 text-zinc-300 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200"
+    className="lg:border-2 text-zinc-700 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200 hover:text-zinc-800"
     to="/home"
   >
     More properties
@@ -617,18 +630,18 @@ stage of their real estate journey. </p>
     <div className="text-gray-700 text-lg font-medium mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
   <div>
   <div className="w-full relative">
-<p className="text-lg text-gray-300 font-semibold font-manrope">
+<p className="text-lg text-gray-800 font-semibold font-manrope">
 <span className="bg-gradient-to-r from-indigo-600  to-purple-600  bg-no-repeat bg-bottom p-1 text-white">Our</span> Blog
 </p>
 </div>
-      <span className="text-sm text-zinc-300 font-thin">
+      <span className="text-sm text-zinc-800 font-thin">
         Enjoy our carefully curated selection of some properties as we walk you around them.
       </span>
     
   </div>
   <Link
-    className="lg:border-2 text-zinc-300 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200 hover:text-zinc-800"
-    to="/home"
+    className="lg:border-2 text-zinc-800 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200 hover:text-zinc-800"
+    to="/blogpage"
   >
     View All Posts
   </Link>
@@ -638,48 +651,18 @@ stage of their real estate journey. </p>
     {/* <!-- Property Listings Grid --> */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
       {/* <!-- Property Card --> */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden ">
-        {/* <img src="https://via.placeholder.com/400x200" alt="Property Image" className="w-full h-48 object-cover"> */}
-      <img className='w-full object-cover hover:scale-110 ease-in-out duration-300' src="https://cdn.excelproperties.ae/media/blog/thumbnail/restaurants_in_downtown_dubai_thumbnail.webp?width=400&height=288&format=webp&quality=90&aspect_ratio=3:2" alt="" />
-       
-        <div className="p-4">
-          <span className="text-red-500 text-xs font-bold px-2 py-1 rounded uppercase">Lifestyle  <span className='date ml-[13vw] text-zinc-600'>November 26,2024</span> </span>
-          <p className=" text-xl mt-3">Top 10 Downtown Dubai Restaurants: A Food Lover's Guide</p>
-          <p className="text-sm font-[realtxt]  mt-2">Dining in Downtown Dubai is a rich, sensory experience, reflecting the city's cosmopolitan essence and luxurious standards</p>
-          <div className="flex items-center justify-between mt-4 text-sm text-gray-600">
-          </div>
-        </div>
-      </div>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        {/* <img src="https://via.placeholder.com/400x200" alt="Property Image" className="w-full h-48 object-cover"> */}
-      {/* <img className='w-full h-48 object-cover hover:scale-125 ease-in-out duration-300' src="https://cdn.excelproperties.ae/media/property/offplan/thumbnail/Select_Group_Residence_110_thumbnail.webp?width=377&height=212&format=webp&quality=90&aspect_ratio=16:9" alt="" /> */}
-      <img className='w-full object-cover hover:scale-110 ease-in-out duration-300' src="https://cdn.excelproperties.ae/media/blog/thumbnail/dubai_marina_thumbnail_.webp?width=400&height=288&format=webp&quality=90&aspect_ratio=3:2" alt="" />
-       
-        <div className="p-4">
-          {/* <span className="text-red-500 text-xs font-bold px-2 py-1 rounded uppercase">Lifestyle</span> */}
-         
-          <span className="text-red-500 text-xs font-bold px-2 py-1 rounded uppercase">Lifestyle  <span className='date ml-[13vw] text-zinc-600'>November 26,2024</span> </span>
-          <p className=" text-xl mt-3">Top 10 Downtown Dubai Restaurants: A Food Lover's Guide</p>
-          <p className="text-sm font-[realtxt]  mt-2">Dining in Downtown Dubai is a rich, sensory experience, reflecting the city's cosmopolitan essence and luxurious standards</p>
-          <div className="flex items-center justify-between mt-4 text-sm text-gray-600">
-          </div>
-        </div>
-      </div>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        {/* <img src="https://via.placeholder.com/400x200" alt="Property Image" className="w-full h-48 object-cover"> */}
-      {/* <img className='w-full h-48 object-cover hover:scale-125 ease-in-out duration-300' src="https://cdn.excelproperties.ae/media/property/offplan/thumbnail/Select_Group_Residence_110_thumbnail.webp?width=377&height=212&format=webp&quality=90&aspect_ratio=16:9" alt="" /> */}
-      <img className='w-full object-cover hover:scale-110 ease-in-out duration-300' src="https://cdn.excelproperties.ae/media/blog/thumbnail/dubai_marina_thumbnail.webp?width=400&height=288&format=webp&quality=90&aspect_ratio=3:2" alt="" />
-       
-        <div className="p-4">
-        <span className="text-red-500 text-xs font-bold px-2 py-1 rounded uppercase">Lifestyle  <span className='date ml-[13vw] text-zinc-600'>November 26,2024</span> </span>
-        
-          {/* <span className="text-red-500 text-xs font-bold px-2 py-1 rounded uppercase">Lifestyle</span> */}
-          <p className=" text-xl mt-3">Top 10 Downtown Dubai Restaurants: A Food Lover's Guide</p>
-          <p className="text-sm font-[realtxt]  mt-2">Dining in Downtown Dubai is a rich, sensory experience, reflecting the city's cosmopolitan essence and luxurious standards</p>
-          <div className="flex items-center justify-between mt-4 text-sm text-gray-600">
-          </div>
-        </div>
-      </div>
+     
+     
+      {blogs.map((blog) => (
+        <BlogPost
+          key={blog.id}
+          id={blog.id}
+          title={blog.title}
+          description={blog.description}
+          image={blog.image}
+        />
+      ))}
+ 
 
       {/* <!-- Duplicate the structure for other properties --> */}
      

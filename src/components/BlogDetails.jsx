@@ -1,5 +1,8 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useParams, useNavigate } from "react-router-dom";
+import BlogForm from "./BlogForm";
+import blogs from "../data/Blogs";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -38,6 +41,13 @@ const BlogDetails = () => {
 
   return (
     <div className="py-16 bg-gray-100">
+      <Helmet>
+        <title>{blog.title} - Real Estate Dubai</title>
+        <meta name="description" content={blog.description} />
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.description} />
+        <meta property="og:image" content={blog.image} />
+      </Helmet>
       <div className="container mx-auto px-6 lg:px-12">
         {/* Back Button */}
         <button

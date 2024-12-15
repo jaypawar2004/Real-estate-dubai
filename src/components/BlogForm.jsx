@@ -20,7 +20,7 @@ const BlogForm = ({ onAddBlog }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-red-500 shadow-md rounded-lg p-6 mb-8 mt-[5vw]"
+      className="bg-white shadow-md rounded-lg p-6 mb-8 mt-[5vw]"
     >
       <h2 className="text-2xl font-bold mb-4 text-gray-800">Add New Blog</h2>
       <input

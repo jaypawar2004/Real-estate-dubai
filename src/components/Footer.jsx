@@ -59,7 +59,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[#023145] text-white py-8">
+      <footer className="py-8">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 space-y-4 md:space-y-0">
         {/* Contact Section */}
         <div className="text-center md:text-left">
@@ -90,13 +90,13 @@ const Footer = () => {
         <div className="text-center">
           <h4 className="text-lg font-semibold mb-2">Follow us</h4>
           <div className="flex justify-center space-x-4">
-            <a href="#" className="text-amber-500 hover:text-amber-400">
+            <a href="https://www.facebook.com/share/X5fGKzq57KhFNpsi/?mibextid=JRoKGi" className="text-amber-500 hover:text-amber-400">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="text-amber-500 hover:text-amber-400">
+            <a href="https://www.instagram.com/lerose.realestate/profilecard/?igsh=b3Zrcmp6cTRvMjg4" className="text-amber-500 hover:text-amber-400">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="text-amber-500 hover:text-amber-400">
+            <a href="https://www.linkedin.com/company/lerose-realestate/" className="text-amber-500 hover:text-amber-400">
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a href="#" className="text-amber-500 hover:text-amber-400">

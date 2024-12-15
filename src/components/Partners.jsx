@@ -1,14 +1,15 @@
 import React from 'react'
+import ContactPage from './ContactPage'
 
 const Partners = () => {
   return (
 //    
 <div>
   {/* <!-- Partners Section --> */}
-  <div className="py-16 bg-[#023145] relative top-8 ">
+  <div className="py-16 relative top-8 ">
     <div className="max-w-7xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-gray-300 mb-4">Our Partners</h2>
-      <p className="text-gray-400 mb-8">
+      <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Partners</h2>
+      <p className="text-gray-800 mb-8">
         To locate the ideal property investment for you in Dubai, we engage in <br /> joint ventures with well-reputable local partners.
       </p>
       <div className="overflow-hidden flex items-center justify-center relative w-full h-[10vh] ">
@@ -34,12 +35,12 @@ const Partners = () => {
       </div>
     </div>
   </div>
-
+  <ContactPage />
   {/* <!-- Join Our Newsletter Section --> */}
   <section className="py-16 border-b-2 relative z-20 border-t-2">
     <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-2xl font-bold text-gray-200 mb-4">Join Our Newsletter</h2>
-      <p className="text-gray-300 mb-8">
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">Join Our Newsletter</h2>
+      <p className="text-gray-800 mb-8">
         Join our newsletter for weekly updates on the latest news and exclusive deals.
       </p>
       <div>
@@ -58,7 +59,7 @@ const Partners = () => {
           Subscribe
         </button>
       </div>
-      <p className=" text-gray-400 text-sm mt-4">
+      <p className=" text-gray-800 text-sm mt-4">
         <i className="fas fa-lock"></i> We don't spam at all, our promise!
       </p>
     </div>

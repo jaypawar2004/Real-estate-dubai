@@ -41,7 +41,7 @@ const OffPlan = () => {
   ];
   return (
     <div>
-    <div className="w-full relative lg:mt-[0vw] sm:h-[100vh] mt-[20vw]">
+    <div className="w-full relative lg:h-[60vh] lg:mt-[0vw] sm:h-[100vh] mt-[20vw]">
       {/* Video Background */}
       <video
         loop
@@ -53,8 +53,8 @@ const OffPlan = () => {
       />
       {/* Overlay with Search Container */}
       <div className="bg-black bg-opacity-60 w-full h-full absolute top-0 text-center text-white flex items-center justify-center">
-        <div className="w-full absolute items-center top-28">
-          <h1 id="typewriter" className="text-4xl font-bold">
+        <div className="w-full absolute items-center top-0 lg:top-28">
+          <h1 id="typewriter" className="text-3xl font-bold">
             Discover Luxurious Properties for Sale in Dubai
           </h1>
           {/* Dynamic Property Count */}
@@ -86,20 +86,17 @@ const OffPlan = () => {
           {/* Search Bar */}
           <div className="search-bar flex flex-wrap gap-3 sm:gap-4 items-center justify-center bg-transparent">
             {/* Buy/Rent Dropdown */}
-            <select className="dropdown w-[36vw] bg-transparent sm:w-[15%] border p-2 rounded">
-              <option>Buy</option>
-              <option>Rent</option>
-            </select>
+           
 
             {/* Keyword Search */}
             <input
-              className="srch sm:w-[40%] p-2 border bg-transparent border-gray-300 rounded text-sm sm:text-base"
+              className="srch w-[100vw] sm:w-[40%] p-2 border bg-transparent border-gray-300 rounded text-sm sm:text-base"
               type="text"
               placeholder="Enter keyword to search Residential Properties"
             />
 
             {/* Property Type Dropdown */}
-            <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
+            <select className="dropdown bg-transparent w-[40vw] sm:w-[20%] border p-2 rounded">
               <option>Property Type</option>
               <option>Apartments</option>
               <option>Buildings</option>
@@ -112,7 +109,7 @@ const OffPlan = () => {
             </select>
 
             {/* Bedroom Dropdown */}
-            <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
+            <select className="dropdown bg-transparent w-[40vw] sm:w-[20%] border p-2 rounded">
               <option>Bedroom</option>
               <option>Studio</option>
               <option>1 Bedroom</option>

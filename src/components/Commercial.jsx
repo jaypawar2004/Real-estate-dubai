@@ -100,7 +100,7 @@ function Commercial() {
     <div>
       {/* Hero Section */}
       <div>
-      <div className="w-full relative lg:mt-[0vw] sm:h-[100vh] mt-[20vw]">
+      <div className="w-full relative lg:h-[60vh] lg:mt-[0vw] sm:h-[100vh] mt-[20vw]">
       {/* Video Background */}
       <video
         loop
@@ -112,8 +112,8 @@ function Commercial() {
       />
       {/* Overlay with Search Container */}
       <div className="bg-black bg-opacity-60 w-full h-full absolute top-0 text-center text-white flex items-center justify-center">
-        <div className="w-full absolute items-center top-28">
-          <h1 id="typewriter" className="text-4xl font-bold">
+        <div className="w-full absolute items-center top-0 lg:top-28">
+          <h1 id="typewriter" className="text-3xl font-bold">
             Discover Luxurious Properties for Sale in Dubai
           </h1>
           {/* Dynamic Property Count */}
@@ -145,20 +145,20 @@ function Commercial() {
           {/* Search Bar */}
           <div className="search-bar flex flex-wrap gap-3 sm:gap-4 items-center justify-center bg-transparent">
             {/* Buy/Rent Dropdown */}
-            <select className="dropdown w-[36vw] bg-transparent sm:w-[15%] border p-2 rounded">
+            <select className="dropdown lg:w-[15vw] bg-transparent  border p-2 px-10 rounded">
               <option>Buy</option>
               <option>Rent</option>
             </select>
 
             {/* Keyword Search */}
             <input
-              className="srch sm:w-[40%] p-2 border bg-transparent border-gray-300 rounded text-sm sm:text-base"
+              className="srch sm:w-[40%] p-2 border bg-transparent border-gray-300 rounded text-sm sm:text-base lg:w-[30vw]"
               type="text"
               placeholder="Enter keyword to search Residential Properties"
             />
 
             {/* Property Type Dropdown */}
-            <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
+            <select className="dropdown w-[50vw] bg-transparent sm:w-[20%] border p-2 rounded">
               <option>Property Type</option>
               <option>Apartments</option>
               <option>Buildings</option>
@@ -171,20 +171,10 @@ function Commercial() {
             </select>
 
             {/* Bedroom Dropdown */}
-            <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
-              <option>Bedroom</option>
-              <option>Studio</option>
-              <option>1 Bedroom</option>
-              <option>2 Bedrooms</option>
-              <option>3 Bedrooms</option>
-              <option>4 Bedrooms</option>
-              <option>5 Bedrooms</option>
-              <option>6 Bedrooms</option>
-              <option>7+ Bedrooms</option>
-            </select>
+            
 
             {/* Area Dropdown */}
-            <select className="dropdown  bg-transparent sm:w-[15%] border p-2 rounded">
+            <select className="dropdown w-[34vw]  bg-transparent sm:w-[15%] border p-2 rounded">
               <option>Area</option>
             </select>
 
@@ -205,7 +195,7 @@ function Commercial() {
 
       {/* Filters Section */}
       <section className="container mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold mb-4">Filter by Property Types</h2>
+        <h2 className="text-2xl font-bold mb-4 text-zinc-800">Filter by Property Types</h2>
         <div className="flex flex-wrap gap-4 justify-center">
           {propertyFilters.map(([type, count]) => (
             <button
@@ -225,7 +215,7 @@ function Commercial() {
 
       {/* Filtered Properties Section */}
       <section className="container mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold mb-4">Available Properties</h2>
+        <h2 className="text-2xl font-bold mb-4 text-zinc-800">Available Properties</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProperties.map((property) => (
             <div

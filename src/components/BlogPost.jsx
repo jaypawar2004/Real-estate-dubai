@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";  
 
 const BlogPost = ({ id, title, description, image }) => {  
+  
   return (  
     <div className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden mb-8">  
       {/* Image Section */}

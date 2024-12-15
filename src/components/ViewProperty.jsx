@@ -38,19 +38,19 @@ const PropertyDetails = () => {
           className="w-full h-auto object-cover rounded"
         />
         <div>
-          <h1 className="text-2xl font-bold mb-4 text-gray-100">{property.title}</h1>
-          <p className="text-gray-300 mb-6">{property.description}</p>
+          <h1 className="text-2xl font-bold mb-4 text-gray-900">{property.title}</h1>
+          <p className="text-gray-800 mb-6">{property.description}</p>
           <div className="flex justify-between text-sm text-gray-800 mb-4">
-            <div className="text-zinc-200">
-              <span className="block text-gray-300 font-semibold">Bedrooms</span>
+            <div className="text-zinc-800">
+              <span className="block text-gray-800 font-semibold">Bedrooms</span>
               {property.bedrooms}
             </div>
-            <div className="text-zinc-200">
-              <span className="block text-gray-300 font-semibold">Bathrooms</span>
+            <div className="text-zinc-800">
+              <span className="block text-gray-800 font-semibold">Bathrooms</span>
               {property.bathrooms}
             </div>
-            <div className="text-zinc-200">
-              <span className="block text-gray-300 font-semibold">Area</span>
+            <div className="text-zinc-800">
+              <span className="block text-gray-800 font-semibold">Area</span>
               {property.area}
             </div>
           </div>
@@ -59,7 +59,7 @@ const PropertyDetails = () => {
               {property.price}
             </span>
           </div>
-          <p className="text-gray-300 mb-6">{property.description}</p>
+          <p className="text-gray-800 mb-6">{property.description}</p>
 
         </div>
       </div>
