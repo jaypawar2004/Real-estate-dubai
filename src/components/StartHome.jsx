@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
-import PopPage from './PopPage'
-import ContactPage from './ContactPage';
-import OffPlan from './OffPlan';
+
 import BlogPost from './BlogPost';
 import blogs from "../data/Blogs";
 
@@ -345,14 +343,7 @@ stage of their real estate journey. </p>
     </div>
   </div>
   <div className="max-w-7xl mx-auto p-6 mt-[5vw]">
-    {/* <!-- Header --> */}
-    {/* <div className="text-gray-700 text-lg font-medium mb-6 flex items-center justify-between">
-        <h1 className='lg:text-2xl font-extrabold sm:text-sm '>Featured Propertiea in Dubai <br /> <span className='text-sm text-zinc-400 font-thin'>
-        Enjoy our carefully curated selection of some properties as we walk you around them.
-            </span></h1>
-            <Link className='lg:border-2 p-2 text-lg rounded sm:text-sm border-2 px-5' to='/home'>More properties</Link>
-
-    </div> */}
+    
 <div className="text-gray-700 text-lg font-medium mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
   <div>
   <div className="w-full relative">

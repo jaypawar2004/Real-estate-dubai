@@ -48,7 +48,7 @@ const BlogDetails = () => {
         <meta property="og:description" content={blog.description} />
         <meta property="og:image" content={blog.image} />
       </Helmet>
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-12 lg:mt-5">
         {/* Back Button */}
         <button
           onClick={() => navigate(-1)}

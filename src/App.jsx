@@ -22,6 +22,8 @@ import ContactPage from './components/ContactPage';
 import PropertyListing from './components/PropertyListing';
 import BlogForm from './components/BlogForm';
 import { Helmet } from 'react-helmet';
+import FeedBack from './components/FeedBack';
+
 
 const App = () => {
   return (
@@ -52,6 +54,8 @@ const App = () => {
           <Route path="/contact-us" element={<ContactPage />} />
           <Route path="/blogpage" element={<BlogPage />} />
           <Route path="/blogform" element={<BlogForm />} />
+          <Route path="/feed" element={<FeedBack />} />
+          <Route element={<Map />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/allproperties" element={<PropertyListing />} />
           <Route path="/property/:id" element={<ViewProperty />} />

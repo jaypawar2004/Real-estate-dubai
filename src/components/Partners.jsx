@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactPage from './ContactPage'
+import FeedBack from './FeedBack'
 
 const Partners = () => {
   return (
@@ -35,7 +36,7 @@ const Partners = () => {
       </div>
     </div>
   </div>
-  <ContactPage />
+  <FeedBack />
   {/* <!-- Join Our Newsletter Section --> */}
   <section className="py-16 border-b-2 relative z-20 border-t-2">
     <div className="max-w-4xl mx-auto text-center">

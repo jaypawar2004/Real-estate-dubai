@@ -41,16 +41,16 @@ const NavBar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center  ">
             <ul className="flex gap-4 lg:gap-8 text-sm lg:text-base">
-              <Link to="/home" className=" hover:text-gray-100 transition hover:scale-105">
+              <Link to="/home" className=" hover:text-gray-600 transition hover:scale-105">
                 Buy
               </Link>
-              <Link to="/off-plan" className="hover:text-white transition hover:scale-105">
+              <Link to="/off-plan" className="hover:text-gray-600 transition hover:scale-105">
                 Off Plan
               </Link>
-              <Link to="/commercial" className="hover:text-gray-100 transition hover:scale-105">
+              <Link to="/commercial" className="hover:text-gray-600 transition hover:scale-105">
                 Commercial
               </Link>
-              <Link to="blogpage" className="hover:text-gray-100 transition hover:scale-105">
+              <Link to="blogpage" className="hover:text-gray-600 transition hover:scale-105">
                 Blog
               </Link>
 

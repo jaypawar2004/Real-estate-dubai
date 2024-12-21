@@ -9,11 +9,11 @@ const PropertyForm = () => {
     <div className="">
       
 
-<div className="relative flex flex-col lg:flex-row items-center justify-between bg-cover bg-center min-h-screen" 
-         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1733181738441-bdb8834689ba?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
+<div className="relative flex flex-col lg:flex-row items-center justify-between bg-cover bg-center min-h-screen text-white" 
+       style={{backgroundImage: "url(https://images.unsplash.com/photo-1733510548942-a69d4de5e03a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"}} >
       {/* Left Section */}
       <div className="w-full lg:w-1/2 px-5 lg:pl-16 mb-8 lg:mb-0 text-center lg:text-left relative lg:-top-[15vw]  top-[10vh]">
-          <h1 className="text-black text-2xl lg:text-4xl font-bold mb-4">
+          <h1 className="text-2xl lg:text-4xl font-bold mb-4">
             LOOKING TO SELL OR RENT YOUR PROPERTY?
           </h1>
           <p className=" text-lg lg:text-xl">
@@ -87,7 +87,7 @@ const PropertyForm = () => {
               </label>
               <select
                 id="propertyType"
-                className="w-full border-2 p-3 mt-1 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="w-full border-2 p-3 mt-1 text-zinc-700 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               >
                 <option>Select Property Type</option>
                 <option>Apartment</option>
