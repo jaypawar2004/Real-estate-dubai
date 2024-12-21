@@ -59,9 +59,9 @@ const NavBar = () => {
                   className="dropdown-nav bg-transparent rounded-md p-1 w-[5vw] text-sm"
                   onChange={handleSelectChange}
                 >
-                  <option value="">More</option>
+                  <option value="#">More</option>
                   <option value="Developers">Developers</option>
-                  <option value="Areas">Areas</option>
+                  {/* <option value="Areas">Areas</option> */}
                   <option value="Meet the Team">Meet the Team</option>
                   <option value="Contact Us">Contact Us</option>
                   <option value="About Us">About Us</option>
@@ -123,7 +123,7 @@ class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ea
                 >
                   <option value="">More</option>
                   <option value="Developers">Developers</option>
-                  <option value="Areas">Areas</option>
+                  {/* <option value="Areas">Areas</option> */}
                   <option value="Meet the Team">Meet the Team</option>
                   <option value="Contact Us">Contact Us</option>
                   <option value="About Us">About Us</option>
