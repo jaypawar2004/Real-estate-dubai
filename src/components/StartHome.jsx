@@ -12,7 +12,7 @@ const StartHome = ({ id, title, description, image }) => {
       image: "https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271__340.jpg",
       title: "Home In Merrick Way",
       description:
-        "Enchanting three bedrooms, three bath home with spacious one bedroom, one bath...",
+        "Enchanting three bedrooms, three bath home with spacious one bedroom, one bath... ",
       bedrooms: 3,
       bathrooms: 3,
       area: "4300 Sq Ft",
@@ -48,6 +48,7 @@ const StartHome = ({ id, title, description, image }) => {
   const [subIndex, setSubIndex] = useState(0); // To track the current character
   const [isDeleting, setIsDeleting] = useState(false); // To determine if deleting
   const [delay, setDelay] = useState(100); // Delay between typing/deleting
+  const [showMore, setShowMore] = useState(false);
   
   useEffect(() => {
     const handleTyping = () => {
@@ -91,7 +92,8 @@ const StartHome = ({ id, title, description, image }) => {
     autoPlay
     muted
     className="relative z-0 w-full h-[50vh] sm:h-full object-cover object-center"
-    src="/src/assets/excel-properties-dubai.webm"
+    // src="/src/assets/excel-properties-dubai.webm"
+    src='/src/assets/Website Content.mp4'
     alt=""
   />
   {/* <!-- Overlay with Search Container --> */}
@@ -219,7 +221,7 @@ const StartHome = ({ id, title, description, image }) => {
 
 
         {/* Card 2 */}
-       <Link to='/developer'>
+       <Link to='/developers'>
         <div
           data-aos-delay="150"
           className="rounded-xl bg-white border-t-2 p-6 text-center shadow-xl"
@@ -284,41 +286,42 @@ const StartHome = ({ id, title, description, image }) => {
                         <div className="flex-col justify-start lg:items-start items-center gap-4 flex">
                             <h1 className="text-black text-3xl font-bold leading-relaxed">Why Le Rose Real Estate</h1>
                             <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
-                                <h5
-                                    className="text-gray-800 text-xl font-bold font-manrope leading-normal lg:text-start text-center">
-                                    Explore expert real estate services
-with personalized care tailored to
-your needs.</h5>
-                                <p
-                                    className="text-gray-800 text-base font-normal leading-relaxed lg:text-start text-center">
-                                    Welcome to Le Rose Real Estate, your premier
-real estate partner in Dubai. Founded and
-operated by a dedicated team of Australians, we
-specialize in both off-plan and ready-to-move-in
-properties, ensuring our clients find the perfect
-home or investment opportunity. We guide you
-through every step of the buying and selling
-process. Whether you're seeking a luxurious
-villa, a modern apartment, or a lucrative
-investment project, we are here to make your
-real estate journey seamless and rewarding.
-
-At Le Rose Real Estate, we pride ourselves on
-our personalized service and extensive network,
-enabling us to match clients with the ideal
-properties that meet their needs. Our approach focuses on building open and 
-honest relationships with our clients, ensuring
-they are informed and empowered at every 
-stage of their real estate journey. </p>
-                            </div>
+            <h5 className="text-gray-800 text-xl font-bold font-manrope leading-normal lg:text-start text-center">
+                Explore expert real estate services with personalized care tailored to your needs.
+            </h5>
+            <p className="text-gray-800 text-base font-normal leading-relaxed lg:text-start text-center">
+                Welcome to Le Rose Real Estate, your premier real estate partner in Dubai. Founded and
+                operated by a dedicated team of Australians, we specialize in both off-plan and ready-to-move-in
+                properties, ensuring our clients find the perfect home or investment opportunity.
+                {showMore && (
+                    <>
+                        {" "}
+                        We guide you through every step of the buying and selling process. Whether you're seeking a luxurious
+                        villa, a modern apartment, or a lucrative investment project, we are here to make your
+                        real estate journey seamless and rewarding.
+                        <br />
+                        At Le Rose Real Estate, we pride ourselves on our personalized service and extensive network,
+                        enabling us to match clients with the ideal properties that meet their needs. Our approach focuses on building open and 
+                        honest relationships with our clients, ensuring they are informed and empowered at every stage of their real estate journey.
+                    </>
+                )}
+            </p>
+            <button
+                className="text-blue-500 text-sm mt-2 hover:underline"
+            >
+            </button>
+        </div>
                         </div>
                        
                     </div>
                     <button
-                        className="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex">
+                        className="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex" 
+                        onClick={() => setShowMore(!showMore)}>
+                
+                        
                         <span
-                            className="px-1.5 text-indigo-600 text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">Read
-                            More</span>
+                            className="px-1.5 text-indigo-600 text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">                {showMore ? "Read Less" : "Read More"}
+</span>
                         <svg className="group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
                             xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                             <path d="M6.75265 4.49658L11.2528 8.99677L6.75 13.4996" stroke="#4F46E5" stroke-width="1.6"

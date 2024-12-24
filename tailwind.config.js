@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '375px', // Custom breakpoint for 375px
+      },
       maxWidth: {
         'screen-xl': '1280px',
       },

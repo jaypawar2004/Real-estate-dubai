@@ -129,7 +129,7 @@ const ViewProperty = () => {
           Back to Listings
         </button>
         <h1 className="text-2xl font-bold mb-4 text-gray-900">{property.title}</h1>
-        <p className="text-gray-800 mb-6">{property.description}</p>
+        {/* <p className="text-gray-800 mb-6">{property.description}</p> */}
         <div className="flex justify-between text-sm text-gray-800 mb-4">
           <div className="text-zinc-800">
             <span className="block text-gray-800 font-semibold">Bedrooms</span>
@@ -147,6 +147,9 @@ const ViewProperty = () => {
         <div className="mt-6">
           <span className="text-lg font-bold text-teal-500">{property.price}</span>
         </div>
+        <h2 className="text-2xl font-extrabold mt-10">
+          Description
+        </h2>
         <p className="text-gray-800 mb-6">{property.description}</p>
         
       </div>

@@ -209,42 +209,42 @@ import React, { useState } from "react";
 const developers = [
   {
     name: "Emaar Properties",
-    logo: "https://via.placeholder.com/100", // Replace with actual logo URL
+    logo: "https://cdn.excelproperties.ae/media/developer/logo/emaar.webp?width=137&height=82&format=webp&quality=90", // Replace with actual logo URL
     projects: 270,
     description: "Emaar Properties is one of the top developers in UAE known for iconic buildings like Burj Khalifa.",
-    image: "https://via.placeholder.com/600x400", // Replace with actual developer's image URL
+    image: "/src/assets/webimg1.webp", // Replace with actual developer's image URL
   },
   {
     name: "Damac Properties",
-    logo: "https://via.placeholder.com/100",
+    logo: "https://cdn.excelproperties.ae/media/developer/logo/damac.webp?width=137&height=82&format=webp&quality=90",
     projects: 212,
     description: "Damac Properties offers luxurious properties across Dubai and beyond.",
     image: "https://via.placeholder.com/600x400",
   },
   {
     name: "Binghatti Developers",
-    logo: "https://via.placeholder.com/100",
+    logo: "https://cdn.excelproperties.ae/media/developer/logo/arada.webp?width=137&height=82&format=webp&quality=90",
     projects: 77,
     description: "Binghatti Developers are known for innovative and affordable housing projects.",
     image: "https://via.placeholder.com/600x400",
   },
   {
     name: "Meraas",
-    logo: "https://via.placeholder.com/100",
+    logo: "https://cdn.excelproperties.ae/media/developer/logo/meraas.webp?width=137&height=82&format=webp&quality=90",
     projects: 72,
     description: "Meraas is a Dubai-based holding company creating urban living experiences.",
     image: "https://via.placeholder.com/600x400",
   },
   {
     name: "Sobha Group",
-    logo: "https://via.placeholder.com/100",
+    logo: "https://cdn.excelproperties.ae/media/developer/logo/arada.webp?width=137&height=82&format=webp&quality=90",
     projects: 65,
     description: "Sobha Group develops premium residential and commercial spaces.",
     image: "https://via.placeholder.com/600x400",
   },
   {
     name: "Aldar Properties",
-    logo: "https://via.placeholder.com/100",
+    logo: "https://cdn.excelproperties.ae/media/developer/logo/arada.webp?width=137&height=82&format=webp&quality=90",
     projects: 60,
     description: "Aldar Properties is a leading Abu Dhabi-based real estate developer.",
     image: "https://via.placeholder.com/600x400",

@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AboutUs = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  const handleReadMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <div className="container mx-auto grid grid-cols-1 mt-[10vh] lg:grid-cols-2 gap-16 py-8 lg:mt-[5vw] p-10">
       {/* Left Content */}
@@ -42,14 +48,20 @@ const AboutUs = () => {
         <div className="flex flex-col gap-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">About Us</h2>
           <p className="text-base text-gray-800 leading-7">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ullam saepe, totam dicta fuga provident. Fuga, labore porro? Dolorem unde, explicabo atque voluptatum laborum harum, quas velit voluptates sit rerum non ullam laboriosam iusto ad sequi hic soluta consequatur quaerat! 
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ullam saepe, totam dicta fuga provident.
+            {showMore && (
+              <>
+                {' '}
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid pariatur saepe eos natus? Porro ipsum itaque distinctio, accusantium, assumenda debitis, cupiditate consequatur ab molestiae possimus voluptas expedita in minima impedit accusamus est. Dolorem nulla dignissimos officiis aspernatur! Ullam molestiae harum dolorum at ad vel natus temporibus architecto sapiente necessitatibus nostrum quia adipisci quam nobis, porro deserunt? Temporibus atque ullam aperiam quidem maiores fuga sed labore aliquid suscipit numquam quam ratione accusantium molestias alias vero pariatur similique tempore dicta enim earum, odio harum possimus eos. Voluptatem, pariatur odit aperiam nam illo facilis molestias accusantium! Corporis consectetur, excepturi officiis sunt reiciendis non!
+              </>
+            )}
           </p>
-          <a
-            href="#"
+          <button
+            onClick={handleReadMore}
             className="inline-block text-black p-5 bg-orange-600 lg:w-[10vw] lg:px-6 py-3 rounded-md text-base font-medium hover:bg-orange-700 transition"
           >
-            Read More...
-          </a>
+            {showMore ? 'Read Less' : 'Read More...'}
+          </button>
         </div>
       </div>
     </div>

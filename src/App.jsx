@@ -23,6 +23,7 @@ import PropertyListing from './components/PropertyListing';
 import BlogForm from './components/BlogForm';
 import { Helmet } from 'react-helmet';
 import FeedBack from './components/FeedBack';
+import Login from './components/Login';
 
 
 const App = () => {
@@ -34,7 +35,7 @@ const App = () => {
                 <meta name="keywords" content="Real Estate, Dubai, Properties, Rent, Buy" />
             </Helmet>
       {/* Navbar at the top */}
-      <NavBar />
+      {/* <NavBar /> */}
       {/* <PopPage/> */}
 
       {/* Main content with Routes */}
@@ -55,10 +56,12 @@ const App = () => {
           <Route path="/blogpage" element={<BlogPage />} />
           <Route path="/blogform" element={<BlogForm />} />
           <Route path="/feed" element={<FeedBack />} />
+          <Route path="/login" element={<Login />} />
           <Route element={<Map />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/allproperties" element={<PropertyListing />} />
           <Route path="/property/:id" element={<ViewProperty />} />
+
           {/* <Route path="/map" element={<PopPage />} /> */}
           <Route path="*" element={<div>404 - Page Not Found</div>} />
           <Route path="*" element={<div><Helmet><title>404 - Page Not Found</title></Helmet>404 - Page Not Found</div>} />
