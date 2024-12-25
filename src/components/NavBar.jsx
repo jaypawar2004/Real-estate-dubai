@@ -104,7 +104,7 @@ class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ea
         {isMenuOpen && (
           <div className="absolute top-[75px] left-0 w-full bg-white shadow-lg z-10 lg:hidden">
             <ul className="flex flex-col gap-4 p-4 text-sm text-gray-700">
-              <Link to="/home" className="hover:text-gray-900 transition">
+              <Link to="/buy-property" className="hover:text-gray-900 transition">
                 Buy
               </Link>
               <Link to="/off-plan" className="hover:text-gray-900 transition">

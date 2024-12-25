@@ -157,7 +157,7 @@ const StartHome = ({ id, title, description, image }) => {
           Commercial
         </Link>
         <Link
-          className="tab-btn bg-transparent border border-gray-300 py-2 px- sm:px-5 text-sm sm:text-base rounded cursor-pointer text-white transition-all hover:bg-gray-200 active:bg-black active:text-white"
+          className="tab-btn bg-transparent border border-gray-300 py-2 px-2 sm:px-5 text-sm sm:text-base rounded cursor-pointer text-white transition-all hover:bg-gray-200 active:bg-black active:text-white"
           to="/off-plan"
         >
           Off Plan
@@ -172,9 +172,9 @@ const StartHome = ({ id, title, description, image }) => {
 
         {/* <!-- Keyword Search --> */}
         <input
-          className="srch sm:w-[40%] p-2 border bg-transparent border-gray-300 rounded text-sm sm:text-base"
+          className="srch sm:w-[40%] p-2.5 lg:text-center px-4 border bg-transparent w-[43vw] border-gray-300 rounded text-sm sm:text-base"
           type="text"
-          placeholder="Enter keyword to search Residential Properties"
+          placeholder="Search Properties"
         />
 
         {/* <!-- Property Type Dropdown --> */}

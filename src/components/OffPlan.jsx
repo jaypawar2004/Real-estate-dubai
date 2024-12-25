@@ -54,7 +54,7 @@ const OffPlan = () => {
       {/* Overlay with Search Container */}
       <div className="bg-black bg-opacity-60 w-full h-full absolute top-0 text-center text-white flex items-center justify-center">
         <div className="w-full absolute items-center top-0 lg:top-28">
-          <h1 id="typewriter" className="text-3xl font-bold">
+          <h1 id="typewriter" className="text-xl lg:text-3xl font-bold">
             Discover Luxurious Properties for Sale in Dubai
           </h1>
           {/* Dynamic Property Count */}
@@ -62,7 +62,7 @@ const OffPlan = () => {
         </div>
         <div className="search-container mt-[10vh] h-[25vh] backdrop-blur-sm bg-white/20 rounded-lg w-[90%] max-w-[900px] mx-auto shadow-md z-10 sm:w-[60%] sm:h-[auto] p-1 lg:p-6">
           {/* Tabs */}
-          <div className="tabs space-x-4 sm:justify-start gap-3 sm:gap-5 mb-5">
+          <div className="tabs space-x-2 sm:justify-start gap-3 sm:gap-5 mb-5">
             <Link
               className="tab-btn text-white bg-transparent border border-gray-300 py-2 px-3 sm:px-3 text-sm sm:text-base rounded cursor-pointer transition-all hover:bg-gray-200 active:bg-black active:text-white"
               to="/residential-properties"
@@ -85,14 +85,12 @@ const OffPlan = () => {
 
           {/* Search Bar */}
           <div className="search-bar flex flex-wrap gap-3 sm:gap-4 items-center justify-center bg-transparent">
-            {/* Buy/Rent Dropdown */}
            
-
             {/* Keyword Search */}
             <input
-              className="srch w-[100vw] sm:w-[40%] p-2 border bg-transparent border-gray-300 rounded text-sm sm:text-base"
+              className="srch w-[44vw] sm:w-[40%] p-2 border bg-transparent border-gray-300 rounded text-sm sm:text-base"
               type="text"
-              placeholder="Enter keyword to search Residential Properties"
+              placeholder="Search Off-Plan Properties"
             />
 
             {/* Property Type Dropdown */}
