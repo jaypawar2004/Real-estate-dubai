@@ -32,9 +32,9 @@ const FeedBack = () => {
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-gray-900 text-2xl mb-1 font-bold title-font">Feedback</h2>
+          <h2 className="text-gray-900 text-2xl mb-1 font-bold title-font">Contact Us</h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            Post-ironic portland shabby chic echo park, banjo fashion axe
+          Please get in touch with us - Call, Email, or Fill Out the form below indicating the department you wish to reach, and our dedicated team will contact you within the next 24 hours.
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
@@ -75,7 +75,7 @@ const FeedBack = () => {
             Submit
           </button>
           <p className="text-xs text-gray-500 mt-3">
-            Chicharrones blog helvetica normcore iceland tousled brook viral artisan.
+          Are you an investor, tenant, or landlord? Looking to buy, sell, or rent a property in the UAE?
           </p>
         </div>
       </div>

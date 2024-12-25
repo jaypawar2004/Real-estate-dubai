@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ const NavBar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center  ">
             <ul className="flex gap-4 lg:gap-8 text-sm lg:text-base">
-              <Link to="/home" className=" hover:text-gray-600 transition hover:scale-105">
+              <Link to="/buy-property" className=" hover:text-gray-600 transition hover:scale-105">
                 Buy
               </Link>
               <Link to="/off-plan" className="hover:text-gray-600 transition hover:scale-105">
@@ -67,7 +68,7 @@ const NavBar = () => {
                   <option value="About Us">About Us</option>
                 </select>
               </li>
-
+{/* Translate */}
               <li>
                 <select className="dropdown-nav1 rounded-md p-1 text-sm bg-transparent">
                   <option>EN</option>

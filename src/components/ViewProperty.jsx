@@ -130,7 +130,7 @@ const ViewProperty = () => {
         </button>
         <h1 className="text-2xl font-bold mb-4 text-gray-900">{property.title}</h1>
         {/* <p className="text-gray-800 mb-6">{property.description}</p> */}
-        <div className="flex justify-between text-sm text-gray-800 mb-4">
+        {/* <div className="flex justify-between text-sm text-gray-800 mb-4">
           <div className="text-zinc-800">
             <span className="block text-gray-800 font-semibold">Bedrooms</span>
             {property.bedrooms}
@@ -143,7 +143,30 @@ const ViewProperty = () => {
             <span className="block text-gray-800 font-semibold">Area</span>
             {property.area}
           </div>
-        </div>
+        </div> */}
+        <div className="flex justify-between text-sm text-gray-800 mb-4">
+                <div>
+                  <span className="block font-semibold">Location</span>
+                  <div className="flex items-center">
+                    <i className="ri-map-pin-5-fill text-red-600 mr-2"></i>
+                    {property.location}
+                  </div>
+                </div>
+                <div>
+                  <span className="block font-semibold">Bedrooms</span>
+                  <div className="flex items-center">
+                    <i className="fas fa-th-large text-gray-500 mr-2"></i>
+                    {property.bedrooms}
+                  </div>
+                </div>
+                <div>
+                  <span className="block font-semibold">Area</span>
+                  <div className="flex items-center">
+                    <i className="fas fa-vector-square text-gray-500 mr-2"></i>
+                    {property.area}
+                  </div>
+                </div>
+              </div>
         <div className="mt-6">
           <span className="text-lg font-bold text-teal-500">{property.price}</span>
         </div>

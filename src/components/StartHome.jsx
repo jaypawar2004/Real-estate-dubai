@@ -12,9 +12,9 @@ const StartHome = ({ id, title, description, image }) => {
       image: "https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271__340.jpg",
       title: "Home In Merrick Way",
       description:
-        "Enchanting three bedrooms, three bath home with spacious one bedroom, one bath... ",
+        "Enchanting three bedrooms, three bath home with spacious one bedroom, one bath... Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis explicabo illum commodi ipsa architecto, sequi quos vitae? Alias nihil placeat vero odit laudantium illo odio fugiat nobis, libero velit molestiae harum nesciunt voluptatum debitis eius expedita neque? Consectetur magni non, reiciendis perferendis, est adipisci quisquam sunt accusantium impedit nostrum aut possimus vero ut aliquam, dignissimos dolorum! Exercitationem voluptatibus porro facere atque assumenda aliquam nostrum dolorem neque repudiandae soluta, consectetur praesentium doloremque in fugit! Earum accusamus culpa dolores! Cupiditate unde eaque tempore! Molestias ex aut nobis facilis neque quae possimus minima. Voluptatum minus iure fugiat officiis quibusdam itaque fuga amet unde ducimus, maxime nulla rerum perspiciatis ullam nemo sed aut, esse voluptatibus odio a libero delectus! Saepe fuga obcaecati tenetur aut numquam minus ex quae maiores vero, nisi, porro ut! Accusamus possimus nisi blanditiis est aliquam itaque! Quas animi est pariatur eius sunt unde enim voluptatibus. Aut inventore repudiandae laboriosam necessitatibus recusandae dolorem, odio perferendis architecto. Distinctio facere odio harum sunt magni iure soluta deleniti ad ex iusto quod laudantium repellendus ut magnam, impedit ea ab quaerat totam ratione? Quis facilis consequatur deserunt maiores, ea dolorum tenetur unde sed iure ducimus neque asperiores exercitationem, libero saepe possimus sit. Mollitia itaque voluptatibus quibusdam nesciunt debitis odio quidem illum, perferendis corporis at iure a nulla voluptates? Cupiditate eius similique, harum provident amet accusamus ratione itaque voluptatem! Assumenda, facere illo aliquid ratione dolorem alias sint possimus modi, optio animi, ipsum totam! Obcaecati at eius earum laudantium, aut optio omnis error repellendus sed ullam ea explicabo magni, aliquam accusamus veniam sunt reiciendis, soluta nisi non rerum saepe ratione! Mollitia quibusdam reiciendis maxime beatae quam recusandae ipsum, doloremque deleniti. Inventore modi nam quibusdam. Praesentium reprehenderit itaque consequuntur optio recusandae rerum atque expedita sit odio modi, quibusdam blanditiis. Dolor nisi asperiores id autem quidem, saepe, sunt, neque deleniti voluptatum in mollitia doloribus quaerat totam error repudiandae maxime a aspernatur quos? Maiores eum odio esse facere, minus eius reiciendis corrupti nam nobis rem sit sequi iure voluptas tempore omnis eveniet! A, unde suscipit incidunt cumque nostrum blanditiis necessitatibus eum provident accusantium deserunt qui error neque excepturi pariatur saepe? Minus, debitis velit nihil eveniet doloribus est nemo voluptas ipsa ut corporis reiciendis dignissimos ad atque laboriosam voluptatem rem veritatis commodi ab voluptatum. Velit sit sint eligendi, soluta minima rem, eius dolorum odio unde dolores possimus, debitis provident recusandae illum et dicta quia quas accusantium exercitationem eos. Deserunt itaque accusamus amet possimus magni quia quibusdam mollitia ab sequi quae. Vel laudantium saepe totam! Non maiores quis eligendi natus sit autem, aspernatur tempore dicta tempora nulla quidem? Eos ratione voluptas doloremque saepe dolores corrupti a voluptatum, et quas! Ut eum rem magni est nemo perspiciatis! Rerum maiores maxime harum deserunt molestiae deleniti dolor consequatur tenetur! Facere dolores adipisci natus fuga harum quae rem, nesciunt ab voluptates nulla optio nam provident culpa alias error, fugit doloremque ipsa. Illum vero suscipit voluptatem ullam blanditiis corrupti quam at! Cumque non a repellat laborum eveniet impedit earum id ad eius! Corporis deserunt praesentium minus exercitationem! ",
       bedrooms: 3,
-      bathrooms: 3,
+      location: "Merrick Way",
       area: "4300 Sq Ft",
       price: "$540,000",
       featured: true,
@@ -42,6 +42,18 @@ const StartHome = ({ id, title, description, image }) => {
       price: "$410,000",
       featured: false,
     },
+    {
+      id: 4,
+      image: "https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__340.jpg",
+      title: "Villa In Cairo",
+      description:
+        "The very best waterfront location in Tahrir square and beside many cool places",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "1800 Sq Ft",
+      price: "$410,000",
+      featured: false,
+    },
   ];
   const words = ["Looking to buy or Sell your Property?", "You've come to the right place."];
   const [index, setIndex] = useState(0); // To track the current word
@@ -50,6 +62,31 @@ const StartHome = ({ id, title, description, image }) => {
   const [delay, setDelay] = useState(100); // Delay between typing/deleting
   const [showMore, setShowMore] = useState(false);
   
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
+
+  // Calculate total pages
+  const totalPages = Math.ceil(properties.length / itemsPerPage);
+
+  // Slice the properties to show only for the current page
+  const currentProperties = properties.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  // Handlers for pagination
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
   useEffect(() => {
     const handleTyping = () => {
       const currentWord = words[index];
@@ -109,7 +146,7 @@ const StartHome = ({ id, title, description, image }) => {
       <div className="tabs space-x-4 sm:justify-start gap-3 sm:gap-5 mb-5">
         <Link
           className="tab-btn text-white bg-transparent border border-gray-300 py-2 px-3 sm:px-3 text-sm sm:text-base rounded cursor-pointer transition-all hover:bg-gray-200 active:bg-black active:text-white"
-          to="/home"
+          to="/residential-properties"
         >
           Residential
         </Link>
@@ -120,7 +157,7 @@ const StartHome = ({ id, title, description, image }) => {
           Commercial
         </Link>
         <Link
-          className="tab-btn bg-transparent border border-gray-300 py-2 px-4 sm:px-5 text-sm sm:text-base rounded cursor-pointer text-white transition-all hover:bg-gray-200 active:bg-black active:text-white"
+          className="tab-btn bg-transparent border border-gray-300 py-2 px- sm:px-5 text-sm sm:text-base rounded cursor-pointer text-white transition-all hover:bg-gray-200 active:bg-black active:text-white"
           to="/off-plan"
         >
           Off Plan
@@ -128,7 +165,7 @@ const StartHome = ({ id, title, description, image }) => {
       </div>
 
       {/* <!-- Search Bar --> */}
-      <div className="search-bar flex flex-wrap gap-3 sm:gap-4 items-center justify-center bg-transparent">
+      <div className="search-bar flex flex-wrap gap-1 sm:gap-4 items-center justify-center bg-transparent">
         {/* <!-- Buy/Rent Dropdown --> */}
         <select className="dropdown w-[36vw] bg-transparent sm:w-[15%] border p-2 rounded">
           <option>Buy</option>
@@ -157,22 +194,10 @@ const StartHome = ({ id, title, description, image }) => {
         </select>
 
         {/* <!-- Bedroom Dropdown --> */}
-        <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
-          <option>Bedroom</option>
-          <option className='text-zinc-800'>Studio</option>
-          <option className='text-zinc-800' >1 Bedroom</option>
-          <option className='text-zinc-800' >2 Bedrooms</option>
-          <option className='text-zinc-800' >3 Bedrooms</option>
-          <option className='text-zinc-800' >4 Bedrooms</option>
-          <option className='text-zinc-800' >5 Bedrooms</option>
-          <option className='text-zinc-800' >6 Bedrooms</option>
-          <option className='text-zinc-800' >7+ Bedrooms</option>
-        </select>
+      
 
         {/* <!-- Area Dropdown --> */}
-        <select className="dropdown  bg-transparent sm:w-[15%] border p-2 rounded">
-          <option>Area</option>
-        </select>
+       
 
         {/* <!-- Buttons --> */}
         <div className="w-full sm:w-auto flex items-center justify-evenly gap-2 mt-3 sm:mt-0">
@@ -180,7 +205,7 @@ const StartHome = ({ id, title, description, image }) => {
             ↻
           </button>
           <button className="search-btn sm:w-auto bg-black text-white px-4 py-2 rounded transition hover:bg-gray-800">
-            🔍 Search
+            🔍Search
           </button>
         </div>
       </div>
@@ -246,7 +271,7 @@ const StartHome = ({ id, title, description, image }) => {
         </div>
        
        </Link>
-       <Link to='/home'>
+       <Link to='/residential-properties'>
         <div
           data-aos-delay="150"
           className="rounded-xl bg-white border-t-2 p-6 text-center shadow-xl"
@@ -361,7 +386,7 @@ const StartHome = ({ id, title, description, image }) => {
   </div>
   <Link
     className="lg:border-2 text-zinc-700 lg:p-2 lg:text-lg rounded border border-gray-400 px-4 py-2 sm:px-3 sm:py-1 sm:text-sm hover:bg-gray-200 hover:text-zinc-800"
-    to="/home"
+    to="/buy-property"
   >
     More properties
   </Link>
@@ -370,7 +395,7 @@ const StartHome = ({ id, title, description, image }) => {
     {/* <!-- Property Listings Grid --> */}
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {properties.map((property) => (
+        {currentProperties.map((property) => (
           <div
             key={property.id}
             className="bg-white shadow-md rounded-lg overflow-hidden relative group"
@@ -388,34 +413,30 @@ const StartHome = ({ id, title, description, image }) => {
               />
               <div className="absolute inset-0 bg-teal-600 opacity-0 group-hover:opacity-50 transition duration-300"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                {/* <span className="text-white border border-white px-4 py-2 text-sm">
-                  View Property
-                </span> */}
                 <Link
-                to={`/property/${property.id}`}
-                state={{ property }}
-                className="mt-4 inline-block bg-teal-500 text-white px-4 py-2 rounded text-sm"
-              >
-                View Property
-              </Link>
+                  to={`/property/${property.id}`}
+                  state={{ property }}
+                  className="mt-4 inline-block bg-teal-500 text-white px-4 py-2 rounded text-sm"
+                >
+                  View Property
+                </Link>
               </div>
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-2">{property.title}</h3>
-              <p className="text-sm text-gray-600 mb-4">{property.description}</p>
               <div className="flex justify-between text-sm text-gray-800 mb-4">
+                <div>
+                  <span className="block font-semibold">Location</span>
+                  <div className="flex items-center">
+                    <i className="ri-map-pin-5-fill text-red-600 mr-2"></i>
+                    {property.location}
+                  </div>
+                </div>
                 <div>
                   <span className="block font-semibold">Bedrooms</span>
                   <div className="flex items-center">
                     <i className="fas fa-th-large text-gray-500 mr-2"></i>
                     {property.bedrooms}
-                  </div>
-                </div>
-                <div>
-                  <span className="block font-semibold">Bathrooms</span>
-                  <div className="flex items-center">
-                    <i className="fas fa-shower text-gray-500 mr-2"></i>
-                    {property.bathrooms}
                   </div>
                 </div>
                 <div>
@@ -434,6 +455,36 @@ const StartHome = ({ id, title, description, image }) => {
           </div>
         ))}
       </div>
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center mt-4 space-x-4">
+          <button
+            onClick={handlePrevious}
+            disabled={currentPage === 1}
+            className={`px-4 py-2 rounded ${
+              currentPage === 1
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                : "bg-teal-500 text-white"
+            }`}
+          >
+            Previous
+          </button>
+          <span className="text-sm font-semibold">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            onClick={handleNext}
+            disabled={currentPage === totalPages}
+            className={`px-4 py-2 rounded ${
+              currentPage === totalPages
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                : "bg-teal-500 text-white"
+            }`}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   </div>
   <div className="max-w-7xl mx-auto p-6 mt-[5vw]">
@@ -462,14 +513,14 @@ const StartHome = ({ id, title, description, image }) => {
     {/* <!-- Property Listings Grid --> */}
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {properties.map((property) => (
+        {currentProperties.map((property) => (
           <div
             key={property.id}
             className="bg-white shadow-md rounded-lg overflow-hidden relative group"
           >
             {property.featured && (
               <span className="absolute top-2 left-2 bg-orange-500 text-white text-xs font-bold py-1 px-3 rounded-full z-10">
-                Sale
+                Featured
               </span>
             )}
             <div className="relative">
@@ -480,34 +531,30 @@ const StartHome = ({ id, title, description, image }) => {
               />
               <div className="absolute inset-0 bg-teal-600 opacity-0 group-hover:opacity-50 transition duration-300"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                {/* <span className="text-white border border-white px-4 py-2 text-sm">
-                  View Property
-                </span> */}
                 <Link
-                to={`/property/${property.id}`}
-                state={{ property }}
-                className="mt-4 inline-block bg-teal-500 text-white px-4 py-2 rounded text-sm"
-              >
-                View Property
-              </Link>
+                  to={`/property/${property.id}`}
+                  state={{ property }}
+                  className="mt-4 inline-block bg-teal-500 text-white px-4 py-2 rounded text-sm"
+                >
+                  View Property
+                </Link>
               </div>
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-2">{property.title}</h3>
-              <p className="text-sm text-gray-600 mb-4">{property.description}</p>
               <div className="flex justify-between text-sm text-gray-800 mb-4">
+                <div>
+                  <span className="block font-semibold">Location</span>
+                  <div className="flex items-center">
+                    <i className="ri-map-pin-5-fill text-red-600 mr-2"></i>
+                    {property.location}
+                  </div>
+                </div>
                 <div>
                   <span className="block font-semibold">Bedrooms</span>
                   <div className="flex items-center">
                     <i className="fas fa-th-large text-gray-500 mr-2"></i>
                     {property.bedrooms}
-                  </div>
-                </div>
-                <div>
-                  <span className="block font-semibold">Bathrooms</span>
-                  <div className="flex items-center">
-                    <i className="fas fa-shower text-gray-500 mr-2"></i>
-                    {property.bathrooms}
                   </div>
                 </div>
                 <div>
@@ -526,6 +573,8 @@ const StartHome = ({ id, title, description, image }) => {
           </div>
         ))}
       </div>
+      {/* Pagination Controls */}
+      
     </div>
   </div>
   <div className="max-w-7xl mx-auto p-6 mt-[5vw]">
@@ -554,14 +603,14 @@ const StartHome = ({ id, title, description, image }) => {
     {/* <!-- Property Listings Grid --> */}
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {properties.map((property) => (
+        {currentProperties.map((property) => (
           <div
             key={property.id}
             className="bg-white shadow-md rounded-lg overflow-hidden relative group"
           >
             {property.featured && (
               <span className="absolute top-2 left-2 bg-orange-500 text-white text-xs font-bold py-1 px-3 rounded-full z-10">
-                Off-plan
+                Featured
               </span>
             )}
             <div className="relative">
@@ -572,34 +621,30 @@ const StartHome = ({ id, title, description, image }) => {
               />
               <div className="absolute inset-0 bg-teal-600 opacity-0 group-hover:opacity-50 transition duration-300"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                {/* <span className="text-white border border-white px-4 py-2 text-sm">
-                  View Property
-                </span> */}
                 <Link
-                to={`/property/${property.id}`}
-                state={{ property }}
-                className="mt-4 inline-block bg-teal-500 text-white px-4 py-2 rounded text-sm"
-              >
-                View Property
-              </Link>
+                  to={`/property/${property.id}`}
+                  state={{ property }}
+                  className="mt-4 inline-block bg-teal-500 text-white px-4 py-2 rounded text-sm"
+                >
+                  View Property
+                </Link>
               </div>
             </div>
             <div className="p-4">
               <h3 className="text-lg font-semibold mb-2">{property.title}</h3>
-              <p className="text-sm text-gray-600 mb-4">{property.description}</p>
               <div className="flex justify-between text-sm text-gray-800 mb-4">
+                <div>
+                  <span className="block font-semibold">Location</span>
+                  <div className="flex items-center">
+                    <i className="ri-map-pin-5-fill text-red-600 mr-2"></i>
+                    {property.location}
+                  </div>
+                </div>
                 <div>
                   <span className="block font-semibold">Bedrooms</span>
                   <div className="flex items-center">
                     <i className="fas fa-th-large text-gray-500 mr-2"></i>
                     {property.bedrooms}
-                  </div>
-                </div>
-                <div>
-                  <span className="block font-semibold">Bathrooms</span>
-                  <div className="flex items-center">
-                    <i className="fas fa-shower text-gray-500 mr-2"></i>
-                    {property.bathrooms}
                   </div>
                 </div>
                 <div>
@@ -618,6 +663,7 @@ const StartHome = ({ id, title, description, image }) => {
           </div>
         ))}
       </div>
+      
     </div>
     <div className="max-w-7xl mx-auto mt-[5vw]">
     {/* <!-- Header --> */}

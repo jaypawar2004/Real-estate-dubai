@@ -22,7 +22,7 @@ const PopPage = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white w-full max-w-md mx-4 p-6 rounded-lg shadow-lg relative">
             <button
-              className="absolute top-3 right-3 text-white bg-red-500 hover:bg-red-600 rounded-full p-2 px-[0.9vw] focus:outline-none"
+              className="absolute top-3 right-3 text-white bg-red-500 hover:bg-red-600 rounded-full p-2 lg:px-[0.9vw] px-[13px] focus:outline-none"
               onClick={handleClose}
             >
               ✕
@@ -85,7 +85,7 @@ const PopPage = () => {
               </div>
 
               {/* Property Type Field */}
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <label
                   htmlFor="propertyType"
                   className="block text-sm font-medium text-gray-700"
@@ -101,10 +101,10 @@ const PopPage = () => {
                   <option>Villa</option>
                   <option>Commercial</option>
                 </select>
-              </div>
+              </div> */}
 
               {/* Area Field */}
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <label
                   htmlFor="area"
                   className="block text-sm font-medium text-gray-700"
@@ -117,7 +117,7 @@ const PopPage = () => {
                   placeholder="Enter area"
                   className="w-full border p-3 rounded-md border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 />
-              </div>
+              </div> */}
 
               {/* Submit Button */}
               <button

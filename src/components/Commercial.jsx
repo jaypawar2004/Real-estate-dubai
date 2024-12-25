@@ -61,18 +61,7 @@ function Commercial() {
       price: "$300,000",
       featured: false,
     },
-    {
-      id: 5,
-      type: "Penthouses", // Property type
-      image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
-      title: "Modern Penthouse",
-      description: "A beautiful apartment with modern amenities and a great view...",
-      bedrooms: 2,
-      bathrooms: 2,
-      area: "1200 Sq Ft",
-      price: "$300,000",
-      featured: false,
-    },
+    
   ];
 
   // Calculate dynamic counts of each property type
@@ -124,7 +113,7 @@ function Commercial() {
           <div className="tabs space-x-4 sm:justify-start gap-3 sm:gap-5 mb-5">
             <Link
               className="tab-btn text-white bg-transparent border border-gray-300 py-2 px-3 sm:px-3 text-sm sm:text-base rounded cursor-pointer transition-all hover:bg-gray-200 active:bg-black active:text-white"
-              to="/home"
+              to="/residential-properties"
             >
               Residential
             </Link>
@@ -159,15 +148,15 @@ function Commercial() {
 
             {/* Property Type Dropdown */}
             <select className="dropdown w-[50vw] bg-transparent sm:w-[20%] border p-2 rounded">
-              <option>Property Type</option>
-              <option>Apartments</option>
-              <option>Buildings</option>
-              <option>Duplexes</option>
-              <option>Mansions</option>
-              <option>Penthouses</option>
-              <option>Plots</option>
-              <option>Townhouses</option>
-              <option>Villas</option>
+              <option className='text-zinc-900'>Property Type</option>
+              <option className='text-zinc-900'>Apartments</option>
+              <option className='text-zinc-900'>Buildings</option>
+              <option className='text-zinc-900'>Duplexes</option>
+              <option className='text-zinc-900'>Mansions</option>
+              <option className='text-zinc-900'>Penthouses</option>
+              <option className='text-zinc-900'>Plots</option>
+              <option className='text-zinc-900'>Townhouses</option>
+              <option className='text-zinc-900'>Villas</option>
             </select>
 
             {/* Bedroom Dropdown */}

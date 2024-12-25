@@ -65,7 +65,7 @@ const OffPlan = () => {
           <div className="tabs space-x-4 sm:justify-start gap-3 sm:gap-5 mb-5">
             <Link
               className="tab-btn text-white bg-transparent border border-gray-300 py-2 px-3 sm:px-3 text-sm sm:text-base rounded cursor-pointer transition-all hover:bg-gray-200 active:bg-black active:text-white"
-              to="/home"
+              to="/residential-properties"
             >
               Residential
             </Link>
@@ -97,28 +97,28 @@ const OffPlan = () => {
 
             {/* Property Type Dropdown */}
             <select className="dropdown bg-transparent w-[40vw] sm:w-[20%] border p-2 rounded">
-              <option>Property Type</option>
-              <option>Apartments</option>
-              <option>Buildings</option>
-              <option>Duplexes</option>
-              <option>Mansions</option>
-              <option>Penthouses</option>
-              <option>Plots</option>
-              <option>Townhouses</option>
-              <option>Villas</option>
+            <option className='text-zinc-900'>Property Type</option>
+              <option className='text-zinc-900'>Apartments</option>
+              <option className='text-zinc-900'>Buildings</option>
+              <option className='text-zinc-900'>Duplexes</option>
+              <option className='text-zinc-900'>Mansions</option>
+              <option className='text-zinc-900'>Penthouses</option>
+              <option className='text-zinc-900'>Plots</option>
+              <option className='text-zinc-900'>Townhouses</option>
+              <option className='text-zinc-900'>Villas</option> classNa
             </select>
 
             {/* Bedroom Dropdown */}
             <select className="dropdown bg-transparent w-[40vw] sm:w-[20%] border p-2 rounded">
-              <option>Bedroom</option>
-              <option>Studio</option>
-              <option>1 Bedroom</option>
-              <option>2 Bedrooms</option>
-              <option>3 Bedrooms</option>
-              <option>4 Bedrooms</option>
-              <option>5 Bedrooms</option>
-              <option>6 Bedrooms</option>
-              <option>7+ Bedrooms</option>
+              <option className='text-zinc-900'>Bedroom</option>
+              <option className='text-zinc-900'>Studio</option>
+              <option className='text-zinc-900'>1 Bedroom</option>
+              <option className='text-zinc-900'>2 Bedrooms</option>
+              <option className='text-zinc-900'>3 Bedrooms</option>
+              <option className='text-zinc-900'>4 Bedrooms</option>
+              <option className='text-zinc-900'>5 Bedrooms</option>
+              <option className='text-zinc-900'>6 Bedrooms</option>
+              <option className='text-zinc-900'>7+ Bedrooms</option>
             </select>
 
             {/* Area Dropdown */}

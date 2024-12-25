@@ -118,7 +118,7 @@ function HomePage() {
           <div className="tabs space-x-4 sm:justify-start gap-3 sm:gap-5 mb-5">
             <Link
               className="tab-btn text-white bg-transparent border border-gray-300 py-2 px-3 sm:px-3 text-sm sm:text-base rounded cursor-pointer transition-all hover:bg-gray-200 active:bg-black active:text-white"
-              to="/home"
+              to="/residential-properties"
             >
               Residential
             </Link>
@@ -153,28 +153,28 @@ function HomePage() {
 
             {/* Property Type Dropdown */}
             <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
-              <option>Property Type</option>
-              <option>Apartments</option>
-              <option>Buildings</option>
-              <option>Duplexes</option>
-              <option>Mansions</option>
-              <option>Penthouses</option>
-              <option>Plots</option>
-              <option>Townhouses</option>
-              <option>Villas</option>
+              <option className="text-zinc-900">Property Type</option>
+              <option  className="text-zinc-900">Apartments</option>
+              <option className="text-zinc-900">Buildings</option>
+              <option className="text-zinc-900">Duplexes</option>
+              <option className="text-zinc-900">Mansions</option>
+              <option className="text-zinc-900">Penthouses</option>
+              <option className="text-zinc-900">Plots</option>
+              <option className="text-zinc-900">Townhouses</option>
+              <option className="text-zinc-900">Villas</option>
             </select>
 
             {/* Bedroom Dropdown */}
             <select className="dropdown bg-transparent sm:w-[20%] border p-2 rounded">
-              <option>Bedroom</option>
-              <option>Studio</option>
-              <option>1 Bedroom</option>
-              <option>2 Bedrooms</option>
-              <option>3 Bedrooms</option>
-              <option>4 Bedrooms</option>
-              <option>5 Bedrooms</option>
-              <option>6 Bedrooms</option>
-              <option>7+ Bedrooms</option>
+              <option className="text-zinc-900" >Bedroom</option>
+              <option className="text-zinc-900" >Studio</option>
+              <option className="text-zinc-900" >1 Bedroom</option>
+              <option className="text-zinc-900" >2 Bedrooms</option>
+              <option className="text-zinc-900" >3 Bedrooms</option>
+              <option className="text-zinc-900" >4 Bedrooms</option>
+              <option className="text-zinc-900" >5 Bedrooms</option>
+              <option className="text-zinc-900" >6 Bedrooms</option>
+              <option className="text-zinc-900" >7+ Bedrooms</option>
             </select>
 
             {/* Area Dropdown */}
@@ -250,23 +250,32 @@ function HomePage() {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">{property.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                {/* <p className="text-sm text-gray-600 mb-4">
                   {property.description}
-                </p>
-                <div className="flex justify-between text-sm text-gray-800 mb-4">
-                  <div>
-                    <span className="block font-semibold">Bedrooms</span>
+                </p> */}
+               <div className="flex justify-between text-sm text-gray-800 mb-4">
+                <div>
+                  <span className="block font-semibold">Location</span>
+                  <div className="flex items-center">
+                    <i className="ri-map-pin-5-fill text-red-600 mr-2"></i>
+                    {property.location}
+                  </div>
+                </div>
+                <div>
+                  <span className="block font-semibold">Bedrooms</span>
+                  <div className="flex items-center">
+                    <i className="fas fa-th-large text-gray-500 mr-2"></i>
                     {property.bedrooms}
                   </div>
-                  <div>
-                    <span className="block font-semibold">Bathrooms</span>
-                    {property.bathrooms}
-                  </div>
-                  <div>
-                    <span className="block font-semibold">Area</span>
+                </div>
+                <div>
+                  <span className="block font-semibold">Area</span>
+                  <div className="flex items-center">
+                    <i className="fas fa-vector-square text-gray-500 mr-2"></i>
                     {property.area}
                   </div>
                 </div>
+              </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-bold text-gray-500">
                     For Sale

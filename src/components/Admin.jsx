@@ -13,7 +13,7 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);
 
-const Areas = () => {
+const Admin = () => {
     const [activeSection, setActiveSection] = useState('home');
     const [propertyFormData, setPropertyFormData] = useState({
       title: '',
@@ -206,111 +206,8 @@ const Areas = () => {
             </div>
           )}
       
-      {/* Properties */}
 
-          {/* {activeSection === 'properties' && (
-            <form
-              onSubmit={handlePropertySubmit}
-              className="bg-gray-800 text-white p-4 md:p-6 rounded-lg shadow-lg max-w-full md:max-w-[70vw] mx-auto"
-            >
-              <h2 className="text-lg md:text-2xl font-bold mb-4">Add Property</h2>
-              <div className="mb-4">
-                <label className="block mb-2">Property Title</label>
-                <input
-                  type="text"
-                  name="title"
-                  value={propertyFormData.title}
-                  onChange={handlePropertyInputChange}
-                  className="w-full p-2 rounded text-black border border-gray-400"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2">Property Value (AED)</label>
-                <input
-                  type="number"
-                  name="value"
-                  value={propertyFormData.value}
-                  onChange={handlePropertyInputChange}
-                  className="w-full p-2 rounded text-black border border-gray-400"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2">Location</label>
-                <input
-                  type="text"
-                  name="location"
-                  value={propertyFormData.location}
-                  onChange={handlePropertyInputChange}
-                  className="w-full p-2 rounded text-black border border-gray-400"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2">Category</label>
-                <select
-                  name="category"
-                  value={propertyFormData.category}
-                  onChange={handlePropertyInputChange}
-                  className="w-full p-2 text-black rounded border border-gray-400"
-                >
-                  <option value="Residential">Residential</option>
-                  <option value="Commercial">Commercial</option>
-                  <option value="Off-Plane">Off-Plane</option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2">Type</label>
-                <select
-                  name="type"
-                  value={propertyFormData.type}
-                  onChange={handlePropertyInputChange}
-                  className="w-full p-2 text-black rounded border border-gray-400"
-                >
-                  <option value="Apartment">Apartment</option>
-                  <option value="Villa">Villa</option>
-                  <option value="Office">Office</option>
-                </select>
-              </div>
-              <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block mb-2">Area (in sqft)</label>
-                  <input
-                    type="number"
-                    name="area"
-                    value={propertyFormData.area}
-                    onChange={handlePropertyInputChange}
-                    className="w-full p-2 text-black rounded border border-gray-400"
-                  />
-                </div>
-                <div>
-                  <label className="block mb-2">No. of Bedrooms</label>
-                  <input
-                    type="number"
-                    name="bedrooms"
-                    value={propertyFormData.bedrooms}
-                    onChange={handlePropertyInputChange}
-                    className="w-full p-2 rounded text-black border border-gray-400"
-                  />
-                </div>
-              </div>
-              <div className="mb-4">
-                <label className="block mb-2">Upload Photo</label>
-                <input
-                  type="file"
-                  name="photo"
-                  accept="image/*"
-                  onChange={(e) => handleFileChange(e, 'property')}
-                  className="w-full p-2 rounded border border-gray-400"
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 transition"
-              >
-                Submit
-              </button>
-            </form>
-          )} */}
-            <div>
+            {/* <div>
       <button
         onClick={handleToggleForm}
         className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
@@ -321,7 +218,7 @@ const Areas = () => {
       {showPropertyForm && (
         <form
           onSubmit={handlePropertySubmit}
-          className="bg-gray-800 text-white p-4 md:p-6 rounded-lg shadow-lg max-w-full md:max-w-[70vw] mx-auto mt-4"
+          className="bg-gray-800 relative text-white p-4 md:p-6 rounded-lg shadow-lg max-w-full md:max-w-[50vw] mx-auto mt-4"
         >
           <h2 className="text-lg md:text-2xl font-bold mb-4">Add Property</h2>
 
@@ -428,7 +325,130 @@ const Areas = () => {
           </button>
         </form>
       )}
-    </div>
+    </div> */}
+    {activeSection === 'properties' && (
+  <div>
+    <button
+      onClick={handleToggleForm}
+      className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+    >
+      {showPropertyForm ? "Hide Form" : "Add Property"}
+    </button>
+
+    {showPropertyForm && (
+      <form
+        onSubmit={handlePropertySubmit}
+        className="bg-gray-800 relative text-white p-4 md:p-6 rounded-lg shadow-lg max-w-full md:max-w-[50vw] mx-auto mt-4"
+      >
+        <h2 className="text-lg md:text-2xl font-bold mb-4">Add Property</h2>
+
+        <div className="mb-4">
+          <label className="block mb-2">Property Title</label>
+          <input
+            type="text"
+            name="title"
+            value={propertyFormData.title}
+            onChange={handlePropertyInputChange}
+            className="w-full p-2 rounded text-black border border-gray-400"
+            placeholder='Property Title'
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block mb-2">Property Value (AED)</label>
+          <input
+            type="number"
+            name="value"
+            value={propertyFormData.value}
+            onChange={handlePropertyInputChange}
+            className="w-full p-2 rounded text-black border border-gray-400"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block mb-2">Location</label>
+          <input
+            type="text"
+            name="location"
+            value={propertyFormData.location}
+            onChange={handlePropertyInputChange}
+            className="w-full p-2 rounded text-black border border-gray-400"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block mb-2">Category</label>
+          <select
+            name="category"
+            value={propertyFormData.category}
+            onChange={handlePropertyInputChange}
+            className="w-full p-2 text-black rounded border border-gray-400"
+          >
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Off-Plane">Off-Plane</option>
+          </select>
+        </div>
+
+        <div className="mb-4">
+          <label className="block mb-2">Type</label>
+          <select
+            name="type"
+            value={propertyFormData.type}
+            onChange={handlePropertyInputChange}
+            className="w-full p-2 text-black rounded border border-gray-400"
+          >
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+            <option value="Office">Office</option>
+          </select>
+        </div>
+
+        <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block mb-2">Area (in sqft)</label>
+            <input
+              type="number"
+              name="area"
+              value={propertyFormData.area}
+              onChange={handlePropertyInputChange}
+              className="w-full p-2 text-black rounded border border-gray-400"
+            />
+          </div>
+          <div>
+            <label className="block mb-2">No. of Bedrooms</label>
+            <input
+              type="number"
+              name="bedrooms"
+              value={propertyFormData.bedrooms}
+              onChange={handlePropertyInputChange}
+              className="w-full p-2 rounded text-black border border-gray-400"
+            />
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <label className="block mb-2">Upload Photo</label>
+          <input
+            type="file"
+            name="photo"
+            accept="image/*"
+            onChange={(e) => handleFileChange(e, "property")}
+            className="w-full p-2 rounded border border-gray-400"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 transition"
+        >
+          Submit
+        </button>
+      </form>
+    )}
+  </div>
+)}
+
 
       {/* Homes */}
 
@@ -495,5 +515,5 @@ const Areas = () => {
     );
   };
   
-  export default Areas;
+  export default Admin;
   

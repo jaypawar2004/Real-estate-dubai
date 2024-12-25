@@ -123,11 +123,11 @@ const PropertyForm = () => {
         </div>
     </div>
 
-      
+{/*       
     <div className="search-container bg-white rounded-lg p-5 max-w-[1350px] mx-auto mt-12 shadow-md relative z-10">
-  <div className="tabs flex flex-wrap justify-center gap-4 mb-5">
+  <div className="tabs flex flex-wrap justify-center gap-4 mb-5"> */}
     {/* Responsive Links */}
-    {[
+    {/* {[
       { text: "Properties for sale Dubai", to: "/home" },
       { text: "Commercial for sale in Dubai", to: "/commercial" },
       { text: "Off-Plan Project for sale in Dubai", to: "/off-plan" },
@@ -147,7 +147,7 @@ const PropertyForm = () => {
       </Link>
     ))}
   </div>
-</div>
+</div> */}
 
     </div>
   );
