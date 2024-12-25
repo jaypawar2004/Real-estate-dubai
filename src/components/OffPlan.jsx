@@ -48,7 +48,7 @@ const OffPlan = () => {
         autoPlay
         muted
         className="relative z-0 w-full h-[50vh] sm:h-full object-cover object-center"
-        src="/src/assets/excel-properties-dubai.webm"
+        src="/excel-properties-dubai.webm"
         alt=""
       />
       {/* Overlay with Search Container */}

@@ -35,7 +35,7 @@ const NavBar = () => {
           {/* Logo Section */}
           <div className="w-[65px] h-[65px] rounded-full">
             <Link to="/">
-              <img className="object-cover object-center w-full h-full" src="/src/assets/LE ROSE LOGO.svg" alt="Logo" />
+              <img className="object-cover object-center w-full h-full" src="/LE ROSE LOGO.svg" alt="Logo" />
             </Link>
           </div>
 
