@@ -167,10 +167,7 @@ const StartHome = ({ id, title, description, image }) => {
       {/* <!-- Search Bar --> */}
       <div className="search-bar flex flex-wrap gap-1 sm:gap-4 items-center justify-center bg-transparent">
         {/* <!-- Buy/Rent Dropdown --> */}
-        <select className="dropdown w-[36vw] bg-transparent sm:w-[15%] border p-2 rounded">
-          <option>Buy</option>
-          
-        </select>
+       
   
 
         {/* <!-- Keyword Search --> */}
