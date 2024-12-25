@@ -130,7 +130,8 @@ const StartHome = ({ id, title, description, image }) => {
     muted
     className="relative z-0 w-full h-[50vh] sm:h-full object-cover object-center"
     // src="/src/assets/excel-properties-dubai.webm"
-    src='/src/assets/Website Content.webm'
+    src='/src/assets/Website Content.webm' 
+    type="video/webm"
     alt=""
   />
   {/* <!-- Overlay with Search Container --> */}
