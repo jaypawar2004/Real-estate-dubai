@@ -140,10 +140,10 @@ const StartHome = ({ id, title, description, image }) => {
         {words[index].substring(0, subIndex)}
       </h1>
     </div>
-    <div className="search-container mt-[10vh] h-[25vh] backdrop-blur-sm bg-white/20 rounded-lg w-[90%] max-w-[900px] mx-auto shadow-md z-10 sm:w-[60%] sm:h-[auto] p-1 lg:p-6">
+    <div className="search-container mt-[10vh] h-[25vh] w-[100vw] backdrop-blur-sm bg-white/20 rounded-lg lg:w-[90%] lg:max-w-[900px] mx-auto shadow-md z-10 sm:w-[60%] sm:h-[auto] p-1 lg:p-6">
       
       {/* <!-- Tabs --> */}
-      <div className="tabs lg:space-x-3 sm:justify-start gap-3 sm:gap-5 mb-5">
+      <div className="tabs space-x-3 lg:space-x-3 sm:justify-start gap-3 sm:gap-5 mb-5">
         <Link
           className="tab-btn text-white bg-transparent border border-gray-300 py-2 px-3 sm:px-3 text-sm sm:text-base rounded cursor-pointer transition-all hover:bg-gray-200 active:bg-black active:text-white"
           to="/residential-properties"
